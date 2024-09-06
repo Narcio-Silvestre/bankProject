@@ -6,14 +6,16 @@ const bank = {
     bankNumber: 0,
     accounts: [],
 
-    getAccount: function (numAccountAux){
+    getAccount: function (value){
         for(let account of this.accounts){
-            const {numAccount} = account
-            if(numAccount == numAccountAux) return account
+            const {numAccount,number,email,iban} = account
+            if(numAccount == value) return account
+            if(number == value) return account
+            if(email == value) return account
+            if(iban == value) return account
         }
         return -1;
     },
-
     createAccount: function ({...personData}) {
         const {name,number,email,...others} = personData
         const account = {

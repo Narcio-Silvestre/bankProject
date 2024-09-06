@@ -1,5 +1,5 @@
 'use strict';
-import {transfer,info} from './bankProcedures.mjs'
+import {transfer, transferMBway, infoByPhone, infoByAccount} from './bankProcedures.mjs'
 import {bank} from './bank.mjs'
 
 
@@ -14,17 +14,19 @@ bank.createAccount({name:'Anabda Martis',number:'+351932748197',email:'anabda@gm
 
 console.log(bank.accounts)
 
-info(1)
-info(3)
+infoByAccount(1)
+infoByAccount(3)
 
 transfer(40,3,1)
 
 transfer(100,1,3)
 
-info(1)
-info(3)
+infoByAccount(1)
+infoByAccount(3)
 
 
 
-
+transferMBway(37,'+351928765423','+351912852456')
+infoByPhone('+351928765423')
+infoByPhone('+351912852456')
 
