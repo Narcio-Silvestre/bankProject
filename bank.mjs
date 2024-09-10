@@ -21,9 +21,9 @@ const bank = {
         const account = {
             owner: name,
             numAccount: this.accounts.length + 1,
-            number: number,
-            email: email,
-            others: others,
+            number,
+            email,
+            others,
             iban: `PT500${this.accounts.length}`,
             balance: 250,
             resume: []
