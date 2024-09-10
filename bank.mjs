@@ -6,17 +6,17 @@ const bank = {
     bankNumber: 0,
     accounts: [],
 
-    getAccount: function (value){
-        for(let account of this.accounts){
+    getAccount (value){
+        for(const account of this.accounts){
             const {numAccount,number,email,iban} = account
             if(numAccount == value) return account
             if(number == value) return account
             if(email == value) return account
             if(iban == value) return account
         }
-        return -1;
+        return undefined;
     },
-    createAccount: function ({...personData}) {
+    createAccount ({...personData}) {
         const {name,number,email,...others} = personData
         const account = {
             owner: name,
